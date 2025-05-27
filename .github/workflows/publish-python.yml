@@ -1,4 +1,4 @@
-name: Dry-Run Python Package Publish
+name: Publish Python Packages
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Dry-Run Publish
+name: Publish Node Packages
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Python Package Build & Check
+name: Build & Check Python Packages
 
 on:
   push:
