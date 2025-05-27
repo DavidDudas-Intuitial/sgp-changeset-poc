@@ -11,6 +11,8 @@ permissions:
 jobs:
   version:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
