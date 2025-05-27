@@ -1,3 +1,13 @@
+## 0.4.0
+
+## 0.4.0
+
+### Minor Changes
+
+- [#3](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/pull/3) [`700e259`](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/commit/700e259a9f550b39cf698de97582fca93728ba72) Thanks [@DavidDudas-Intuitial](https://github.com/DavidDudas-Intuitial)! - Minor change to test automated versioning
+
+- minor release based on changeset
+
 # common_grants_sdk
 
 ## 0.3.0
