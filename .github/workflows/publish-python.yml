@@ -9,7 +9,7 @@ on:
       - ".github/workflows/publish-python.yml"
 
 jobs:
-  dry-run-publish-python:
+  publish-python-dry-run:
     runs-on: ubuntu-latest
     defaults:
       run:
