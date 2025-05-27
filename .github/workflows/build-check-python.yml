@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "packages-python/**"
-      - ".github/workflows/python-package-check.yml"
+      - ".github/workflows/build-check-python.yml"
   pull_request:
     paths:
       - "packages-python/**"

@@ -22,5 +22,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Dry-run publish packages
+      - name: Publish packages dry-run
         run: pnpm publish --dry-run --no-git-checks
