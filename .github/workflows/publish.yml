@@ -1,0 +1,26 @@
+name: Dry-Run Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  dry-run-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Dry-run publish packages
+        run: pnpm publish --dry-run --no-git-checks
