@@ -35,14 +35,14 @@ jobs:
       - name: Install Node.js dependencies
         run: pnpm install
 
-      - name: Run changeset version (for Node packages)
-        run: pnpm changeset version
-
       - name: Install Python dependencies
         run: pip install semver
 
-      - name: Run Python version bump script
+      - name: Run Python version bump script (must run before "pnpm changeset version"!)
         run: python scripts/bump_python_version.py
+
+      - name: Run changeset version for Node packages
+        run: pnpm changeset version
 
       - name: Commit version bumps
         run: |
