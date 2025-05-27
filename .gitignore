@@ -1,2 +1,19 @@
+# Nodejs modules
 node_modules/
 .pnpm-debug.log
+
+# Python package build artifacts
+packages-python/**/build/
+packages-python/**/dist/
+packages-python/**/*.egg-info/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+env/
