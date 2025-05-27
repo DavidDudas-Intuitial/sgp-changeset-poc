@@ -15,6 +15,8 @@ importers:
         specifier: ^2.29.4
         version: 2.29.4
 
+  packages-python/common_grants_sdk: {}
+
   packages/core: {}
 
   packages/utils: {}
