@@ -44,13 +44,18 @@ jobs:
       - name: Run changeset version for Node packages
         run: pnpm changeset version
 
+      - name: Tag Python package version
+        run: |
+          PY_VERSION=$(grep 'version=' packages-python/common_grants_sdk/setup.py | sed -E "s/.*version=['\"]([^'\"]+)['\"].*/\1/")
+          git tag common_grants_sdk@${PY_VERSION}
+
+      - name: Tag Node package version
+        run: pnpm changeset tag
+
       - name: Commit version bumps
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "chore: version packages [skip ci]" || echo "No changes to commit"
-          git push
-
-      - name: Push tags for GitHub Releases
-        run: pnpm changeset tag
+          git push --follow-tags
