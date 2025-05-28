@@ -1,3 +1,13 @@
+## 0.5.0
+
+## 0.5.0
+
+### Minor Changes
+
+- [#4](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/pull/4) [`4cc2bc2`](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/commit/4cc2bc20ab6d6eec65244c35857f98f536a06fd7) Thanks [@DavidDudas-Intuitial](https://github.com/DavidDudas-Intuitial)! - Minor change to test release automation
+
+- minor release based on changeset
+
 ## 0.4.0
 
 ## 0.4.0
