@@ -1,16 +1,13 @@
 name: Create GitHub Release from Tag
 
 on:
-  push:
-    tags:
-      - '*'
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
   create-release-from-tag:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
