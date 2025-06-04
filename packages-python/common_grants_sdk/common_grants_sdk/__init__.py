@@ -2,4 +2,4 @@
 
 def hello():
     print("Hello World!")
-    print("E2E Test #1 in progress")
+    print("E2E Test #2 in progress")
