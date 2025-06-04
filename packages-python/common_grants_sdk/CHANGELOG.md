@@ -1,3 +1,13 @@
+## 0.8.2
+
+## 0.8.2
+
+### Patch Changes
+
+- [#9](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/pull/9) [`84c8846`](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/commit/84c88461724c1ee268b6408e6c551c2739b2b648) Thanks [@DavidDudas-Intuitial](https://github.com/DavidDudas-Intuitial)! - E2E test 2
+
+- patch release based on changeset
+
 ## 0.8.1
 
 ## 0.8.1

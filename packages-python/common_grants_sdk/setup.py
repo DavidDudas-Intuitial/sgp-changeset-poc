@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="common_grants_sdk",
-    version="0.8.1",
+    version="0.8.2",
     description="Python implementation of CommonGrants Protocol",
     author="HHS",
     packages=find_packages(),
