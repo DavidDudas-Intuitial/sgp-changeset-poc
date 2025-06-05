@@ -38,13 +38,28 @@ jobs:
       - name: Install Python dependencies
         run: pip install semver
 
+      - name: Detect if any changesets exist
+        id: check_changesets
+        run: |
+          set -e
+          CHANGESET_FILES=$(find .changeset -type f -name "*.md" ! -name "README.md")
+          if [ -n "$CHANGESET_FILES" ]; then
+            echo "Found changeset files"
+            echo "found=true" >> $GITHUB_OUTPUT
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run Python version bump script (must run before changeset version!)
+        if: steps.check_changesets.outputs.found == 'true'
         run: python scripts/bump_python_version.py
 
       - name: Run changeset version for Node packages
+        if: steps.check_changesets.outputs.found == 'true'
         run: pnpm changeset version
 
       - name: Commit version bumps
+        if: steps.check_changesets.outputs.found == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -53,12 +68,15 @@ jobs:
           git push
 
       - name: Tag Python package version
+        if: steps.check_changesets.outputs.found == 'true'
         run: |
           PY_VERSION=$(grep 'version=' packages-python/common_grants_sdk/setup.py | sed -E "s/.*version=['\"]([^'\"]+)['\"].*/\1/")
           git tag common_grants_sdk@${PY_VERSION}
 
       - name: Tag Node package version
+        if: steps.check_changesets.outputs.found == 'true'
         run: pnpm changeset tag
 
       - name: Push all tags
+        if: steps.check_changesets.outputs.found == 'true'
         run: git push --tags
