@@ -1,3 +1,13 @@
+## 0.8.4
+
+## 0.8.4
+
+### Patch Changes
+
+- [#12](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/pull/12) [`3b07910`](https://github.com/DavidDudas-Intuitial/sgp-changeset-poc/commit/3b07910266a9675f31f89c78f59da4f8e0a42c71) Thanks [@DavidDudas-Intuitial](https://github.com/DavidDudas-Intuitial)! - Test changeset workflow
+
+- patch release based on changeset
+
 ## 0.8.3
 
 ## 0.8.3
